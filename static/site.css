@@ -1,0 +1,31 @@
+ h1 {
+   text-align: center;
+ }
+
+#game-canvas {
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  grid-auto-flow: row;
+}
+
+#game-canvas > div {
+   height: 20px;
+   width: 20px;
+   background-color: green;
+ }
+
+ #game-canvas .snake {
+   background-color: rgb(37, 0, 0);
+ }
+
+ #game-canvas .apple {
+   background-color: red;
+ }
+
+ #game-over {
+   position: absolute;
+   top: 200px;
+   left: 600px;
+   z-index: 99;
+   display: none;
+ }
