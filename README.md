@@ -26,7 +26,7 @@ There is _default_ structure and rules for canvas in _.html ja and _.css files. 
 ### Advantages of game's algorithm
 
 - No need to have duplicate internal artifacts.
-- If there are las artifacts, then there will be less state management work to be done.
+- If there are less artifacts, then there will be less state management work to be done.
   - There are no separate internal state refresh taks.
 - Less system resources and time needed to manage game's and UI state.
   - There are no specific UI refresh taks, that will redraw all teh canvas' state.
