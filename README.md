@@ -1,6 +1,6 @@
 # html5-snake-game
 
-## About Algorithm
+## About game algorithm
 
 All _cells_ that make up games-board/canvas are rendered as collection of 1-dimensional array of `div`. elements.
 
@@ -14,14 +14,16 @@ If snake's head is advanced by one cell, _next_ cell in DOM is decorated by _sna
 
 `Snake.move()` method returns popped, e.g. body's last cell and by this value canvas' exact cell will get _snake_ class removed.
 
-## UI rendering
+_Head_ position on _virtual_ canvas is calculated mathematically, for every direction algorithm varies. There are pure numeric computations that are fast.
+
+### UI rendering
 
 As mentioned before no tabular HTML is used as it allows to keep things more simpler.
 Instead, array of `div`-s is "folded" to row br **CSS grid**.
 
 There is _default_ structure and rules for canvas in _.html ja and _.css files. On `snakeGame` instantataion the property of `element.style.gridTemplateColumns` is corrected so styling wont' suffer.
 
-### Advantages
+### Advantages of game's algorithm
 
 - No need to have duplicate internal artifacts.
 - If there are las artifacts, then there will be less state management work to be done.
@@ -29,9 +31,9 @@ There is _default_ structure and rules for canvas in _.html ja and _.css files. 
 - Less system resources and time needed to manage game's and UI state.
   - There are no specific UI refresh taks, that will redraw all teh canvas' state.
 
-### Disadvantages
+### Disadvantages game's algorithm
 
-- Lack of 2-dimensional internal state bit it more difficult to create moving algorithms in `Snake.moveHead*()` methods. But it is one-time work anyway and can be mitigated by documentation.
+- Lack of 2-dimensional internal resulted a bit difficult to create moving algorithms in `Snake.moveHead*()` methods. But it is one-time work anyway and can be mitigated by documentation.
 
 ## Classes description
 
